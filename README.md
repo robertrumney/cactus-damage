@@ -26,7 +26,7 @@ To use this script in your Unity project, follow these steps:
 // Pass the calculated damage divided by the damageDamping value, rounded to the nearest integer.
 Game.instance.playerScript.Damage(Mathf.Round(damage / damageDamping));
 ```
-6. If your game does not use a singleton game manager such as the `Game.instance` one shown above, you can use a GetComponent like this:
+6. If your game does not use a singleton game manager such as the `Game.instance` one shown above, you can use a GetComponent:
 ```csharp
 // Assuming your player script type is `Player`:
 using UnityEngine;
