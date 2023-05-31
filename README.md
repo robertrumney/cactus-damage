@@ -28,7 +28,6 @@ Game.instance.playerScript.Damage(Mathf.Round(damage / damageDamping));
 ```
 6. If your game does not use a singleton game manager such as the `Game.instance` one shown above, you can use a GetComponent:
 ```csharp
-// Assuming your player script type is `Player`:
 using UnityEngine;
 
 public class Cactus : MonoBehaviour 
@@ -46,7 +45,7 @@ public class Cactus : MonoBehaviour
 
             // Call the Damage method on the playerScript component of the Game.instance.playerScript object.
             // Pass the calculated damage divided by the damageDamping value, rounded to the nearest integer.
-            x.GetComponent<Player>().Damage(Mathf.Round(damage / damageDamping));
+            x.collider.gameObject.GetComponent<Player>().Damage(Mathf.Round(damage / damageDamping));
         }
     }
 }
