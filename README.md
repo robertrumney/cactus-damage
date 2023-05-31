@@ -42,9 +42,12 @@ public class Cactus : MonoBehaviour
         {
             // Calculate the damage by rounding the magnitude of the relative velocity of the collision.
             float damage = Mathf.Round(x.relativeVelocity.magnitude); 
-
-            // Replace old line with this 
-            x.collider.gameObject.GetComponent<Player>().Damage(Mathf.Round(damage / damageDamping));
+            
+            // Pass the calculated damage divided by the damageDamping value, rounded to the nearest integer.
+            damage = Mathf.Round(damage/damageDamping);
+            
+            // Replace existing third line with this 
+            x.collider.gameObject.GetComponent<Player>().Damage(damage);
         }
     }
 }
