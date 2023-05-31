@@ -12,10 +12,12 @@ public class Cactus : MonoBehaviour
         {
             // Calculate the damage by rounding the magnitude of the relative velocity of the collision.
             float damage = Mathf.Round(x.relativeVelocity.magnitude); 
-
-            // Call the Damage method on the playerScript component of the Game.instance.playerScript object.
+            
             // Pass the calculated damage divided by the damageDamping value, rounded to the nearest integer.
-            Game.instance.playerScript.Damage(Mathf.Round(damage / damageDamping));
+            damage = Mathf.Round(damage / damageDamping);
+            
+            // Call the Damage method on the playerScript component of the Game.instance.playerScript object.
+            Game.instance.playerScript.Damage(damage);
         }
     }
 }
