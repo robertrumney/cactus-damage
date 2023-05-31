@@ -1,10 +1,10 @@
 # Simple Cactus Repository
 
-This is a simple repository that contains a C# script for a cactus object in a Unity game. The script is responsible for causing damage to the player when a collision occurs between the cactus and the player.
+This is a simple repository that contains a C# script for a cactus object in a Unity game. The script is responsible for causing damage to the player when a collision occurs between the cactus and the player, and for making the damage relative to the velocity of impact.
 
 ## How it Works
 
-The `Cactus` script is attached to a game object in the Unity scene. When a collision happens, the script checks if the collided object has a tag of "Player". If it does, the script calculates the damage based on the magnitude of the relative velocity of the collision. The damage is then passed to the `PlayaDamage` method on the playerScript component of the Game.instance.playerScript object, after being divided by a damage damping value.
+The `Cactus` script is attached to a game object in the Unity scene. When a collision happens, the script checks if the collided object has a tag of "Player". If it does, the script calculates the damage based on the magnitude of the relative velocity of the collision. The damage is then passed to the `Damage` method on the playerScript component of the Game.instance.playerScript object, after being divided by a damage damping value.
 
 ## Features
 
